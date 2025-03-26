@@ -36,7 +36,7 @@
   }
 </script>
 
-<div class="mx-auto container flex w-3xl flex-col m-5">
+<div class="mx-auto container flex flex-col m-5 sm:p-10">
   <div class="flex items-center">
     <div class="h-36">
       <img
