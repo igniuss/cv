@@ -7,7 +7,7 @@
 
   import gravitar from "./assets/gravitar.jpg";
   import qatool from "./assets/screenshots/qa-tool.png";
-    import { MailPlus, PhoneCall } from "lucide-svelte";
+  import { MailPlus, PhoneCall } from "lucide-svelte";
 
   const tbwGallery = Object.values(
     import.meta.glob(
@@ -29,7 +29,7 @@
     "Sharing Knowledge",
     "NixOS",
     "Linux",
-    "Optimization Quirks"
+    "Optimization Quirks",
   ];
 
   function getInterest() {
@@ -37,7 +37,7 @@
   }
 </script>
 
-<div class="mx-auto container flex flex-col m-5 p-5 text-xs md:text-base">
+<div class="mx-auto container flex flex-col p-5 text-xs md:text-base">
   <div class="gap-10 flex">
     <img
       src={gravitar}
@@ -49,8 +49,13 @@
       <h1 class="text-3xl">Sean Lavaerts</h1>
       <div class="flex gap-2 items-center">
         <span class="grow"></span>
-        <MailPlus size={12}/>
-        <p><a class="text-black underline-offset-3 underline" href="mailto:inquire@igniuss.com">inquire@igniuss.com</a> </p>
+        <MailPlus size={12} />
+        <p>
+          <a
+            class="text-black underline-offset-3 underline"
+            href="mailto:inquire@igniuss.com">inquire@igniuss.com</a
+          >
+        </p>
       </div>
       <div class="flex gap-2 items-center">
         <span class="grow"></span>
@@ -59,7 +64,7 @@
       </div>
       <p>Native Dutch & English</p>
       <p class="text-sm">Learning Swedish</p>
-      <br>
+      <br />
       <p>Belgian 🇧🇪 | Living in Sweden 🇸🇪</p>
     </div>
   </div>
@@ -129,7 +134,9 @@
       <br />
       <div class="flex-col flex gap-2 border rounded-xl p-4">
         <span class="flex align-middle justify-center">
-          <p class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl whitespace-nowrap">
+          <p
+            class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl whitespace-nowrap"
+          >
             Homebrew - Patent Unkown
           </p>
         </span>
@@ -192,23 +199,36 @@
         <p>4 titles for Escape Rooms in Belgium</p>
         <p>2 multiplayer titles for VR Arcade in Belgium</p>
         <p>Booking system written in C# (ASP.Net) with Lua modules</p>
-        <p>Cloud Orchestrator system written in C# (ASP.Net) with Lua modules</p>
+        <p>
+          Cloud Orchestrator system written in C# (ASP.Net) with Lua modules
+        </p>
       </div>
     </div>
     <Divider />
-    <br>
+    <br />
     <div class="border rounded-xl p-4">
       <span class="flex align-middle justify-center">
         <p class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl">
           Other Information
         </p>
       </span>
-      <br>
-      <p>During my time in the industry, I have done many presentations, in-house for fellow developers, and a handful for external companies</p>
       <br />
-      <p>Sadly I can't publicly share most of the presentations, but here are the topics</p>
+      <p>
+        During my time in the industry, I have done many presentations, in-house
+        for fellow developers, and a handful for external companies
+      </p>
+      <br />
+      <p>
+        Sadly I can't publicly share most of the presentations, but here are the
+        topics
+      </p>
       <br />
       <Presentations />
     </div>
+  </div>
+
+  <div class="flex py-4">
+    <span class="grow"></span>
+    <p class="text-[8px]">Psst! Thanks for reaching the end 💖</p>
   </div>
 </div>
