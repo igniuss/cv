@@ -7,6 +7,7 @@
 
   import gravitar from "./assets/gravitar.jpg";
   import qatool from "./assets/screenshots/qa-tool.png";
+    import { MailPlus, PhoneCall } from "lucide-svelte";
 
   const tbwGallery = Object.values(
     import.meta.glob(
@@ -36,20 +37,29 @@
   }
 </script>
 
-<div class="mx-auto container flex flex-col m-5 sm:p-10">
-  <div class="flex items-center">
-    <div class="h-36">
-      <img
-        src={gravitar}
-        alt=""
-        class="h-full object-contain rounded-full aspect-square -rotate-5"
-      />
-    </div>
+<div class="mx-auto container flex flex-col m-5 p-5 text-xs md:text-base">
+  <div class="gap-10 flex">
+    <img
+      src={gravitar}
+      alt=""
+      class="object-contain rounded-full aspect-square -rotate-5 hidden md:inline h-32"
+    />
     <span class="grow"></span>
     <div class="flex flex-col text-right">
       <h1 class="text-3xl">Sean Lavaerts</h1>
-      <p>slava_be@hotmail.com</p>
-      <p>+46736548867</p>
+      <div class="flex gap-2 items-center">
+        <span class="grow"></span>
+        <MailPlus size={12}/>
+        <p><a class="text-black underline-offset-3 underline" href="mailto:inquire@igniuss.com">inquire@igniuss.com</a> </p>
+      </div>
+      <div class="flex gap-2 items-center">
+        <span class="grow"></span>
+        <PhoneCall size={12} />
+        <p>+46736548867</p>
+      </div>
+      <p>Native Dutch & English</p>
+      <p class="text-sm">Learning Swedish</p>
+      <br>
       <p>Belgian 🇧🇪 | Living in Sweden 🇸🇪</p>
     </div>
   </div>
@@ -82,7 +92,7 @@
       <p class="text-3xl">Work</p>
       <div class="flex-col flex gap-2 border rounded-xl p-4">
         <span class="flex align-middle justify-center">
-          <p class="text-4xl absolute -translate-y-9 bg-white px-5">
+          <p class="text-2xl absolute -translate-y-9 bg-white px-5">
             Toca Boca World
           </p>
         </span>
@@ -119,7 +129,7 @@
       <br />
       <div class="flex-col flex gap-2 border rounded-xl p-4">
         <span class="flex align-middle justify-center">
-          <p class="text-4xl absolute -translate-y-9 bg-white px-5 rounded-xl">
+          <p class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl whitespace-nowrap">
             Homebrew - Patent Unkown
           </p>
         </span>
@@ -175,7 +185,7 @@
       <br />
       <div class="flex-col flex gap-2 border rounded-xl p-4">
         <span class="flex align-middle justify-center">
-          <p class="text-4xl absolute -translate-y-9 bg-white px-5 rounded-xl">
+          <p class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl">
             Projects under NDA
           </p>
         </span>
@@ -186,14 +196,17 @@
       </div>
     </div>
     <Divider />
+    <br>
     <div class="border rounded-xl p-4">
-      <p class="text-3xl">Others</p>
-      <p>I have many goals in life, but 2 that remain constant are</p>
-      <p class="italic mx-2">Always keep learning</p>
-      <p class="italic mx-2">Always share knowledge</p>
+      <span class="flex align-middle justify-center">
+        <p class="text-2xl absolute -translate-y-9 bg-white px-5 rounded-xl">
+          Other Information
+        </p>
+      </span>
       <br>
-      <p>So during my time in the industry, I have done many presentations, in-house for fellow developers, and some for external companies</p>
-      <p>Sadly I can't publicly share the full presentations, so instead I give you the titles</p>
+      <p>During my time in the industry, I have done many presentations, in-house for fellow developers, and a handful for external companies</p>
+      <br />
+      <p>Sadly I can't publicly share most of the presentations, but here are the topics</p>
       <br />
       <Presentations />
     </div>
